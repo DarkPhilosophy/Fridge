@@ -1,157 +1,96 @@
-# Screenshot Manager
+# Fridge ❄️
 
-<!-- LATEST-BUILD-STATUS-START -->
-[![PreBuild](https://img.shields.io/badge/PreBuild-Passing-brightgreen)](https://github.com/DarkPhilosophy/Ko/actions)
-[![Build Status](https://github.com/DarkPhilosophy/Ko/actions/workflows/build-apk.yaml/badge.svg)](https://github.com/DarkPhilosophy/Ko/actions)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version 1.0.0](https://img.shields.io/badge/Version-1.0.0-blue.svg)](https://github.com/DarkPhilosophy/android-Snapify)
-<!-- LATEST-BUILD-STATUS-END -->
+A robust Android project template extracted from `ro.snapify`.
+Ready for GitHub, CI/CD, and modern Android development (Compose, Hilt, Detekt).
 
-A modern, intelligent Android application to automatically manage and organize your screenshots. Keep what matters, delete the rest automatically.
+## 🚀 Getting Started
 
-<!-- LATEST-VERSION-START -->
-### Latest Update (v1.0.0)
-- **Edge-to-Edge UI**: Migrated legacy UI flags to `enableEdgeToEdge()` for a modern, immersive experience.
-- **Project Structure**: Added `version.properties` for automated version management.
-- **CI/CD**: Added robust GitHub Actions workflow with asset conflict resolution.
+### 1. Use this Template
+Click "Use this template" on GitHub or fork/clone this repository.
 
-### Fixed
-- **Share and Delete**: Removed arbitrary timers and implemented aggressive cache cleanup in `OverlayService` (on create & pre-share) to fix sharing failures and storage leaks.
-<!-- LATEST-VERSION-END -->
-
-## Validation Status
-<!-- LINT-RESULT-START -->
-### Linting Status
-> **Status**: ✅ **Passing**  
-> **Last Updated**: 2026-01-13 18:22:55 UTC  
-> **Summary**: 0 errors, 0 warnings
-
-<details>
-<summary>Click to view full lint output</summary>
-
-```
-Starting a Gradle Daemon (subsequent builds will be faster)
-
-BUILD SUCCESSFUL in 1m 45s
-120 actionable tasks: 120 executed
-Configuration cache entry stored.
+### 2. Configure Your App
+Modify `buildSrc/src/main/kotlin/Coordinates.kt` to set your project identity:
+```kotlin
+// Change these default values!
+val APP_PACKAGE = "com.example.fridge" 
+val APP_VERSION_NAME = "1.0.0"
 ```
 
-</details>
-<!-- LINT-RESULT-END -->
+### 3. Sync & Build
+Run `./gradlew assembleDebug` to verify the setup.
 
-### Latest Update (v1.0.0)
-- **Edge-to-Edge UI**: Migrated legacy UI flags to `enableEdgeToEdge()` for a modern, immersive experience.
-- **Project Structure**: Added `version.properties` for automated version management.
 
-### Fixed
-- **Share and Delete**: Removed arbitrary timers and implemented aggressive cache cleanup in `OverlayService` (on create & pre-share) to fix sharing failures and storage leaks.
+## 📂 Project Structure
 
-## ✨ Features
+A modular architecture designed for scalability and separation of concerns.
 
-### 📸 Smart Screenshot Detection
+### `app/` (Application Module)
 
-- **Automatic Monitoring**: Continuously monitors your device for new screenshots
-- **Multi-Folder Support**: Detects screenshots in default and custom folders
-- **Real-time Processing**: Instant detection and processing of captured screenshots
+The entry point of the application. Contains the UI logic and Android-specific components.
 
-### 🎯 Intelligent Management
+- **`src/main/kotlin/`**:
+  - `FridgeApplication.kt`: Hilt-enabled Application class.
+  - `FridgeMainActivity.kt`: Main entry point hosting the Compose content.
+- **`build.gradle.kts`**: Module-specific configuration (plugins, dependencies).
 
-- **Two Modes**: Choose between Manual (decide for each screenshot) or Automatic (set deletion timers)
-- **Organized Views**: Filter screenshots by status - Marked, Kept, or All
-- **Manual Mode Overlay**: Quick-action overlay appears immediately after screenshot for instant decisions
+### `core/` (Core Module)
 
-### 🔔 Smart Notifications
+Contains shared business logic, utility classes, and domain models.
 
-- **Countdown Timers**: Live notifications showing time remaining until deletion
-- **Keep Actions**: One-tap keep from notification without opening app
-- **Customizable Alerts**: Configure notification preferences
+- **Purpose**: Keep this module pure and reusable across different feature modules if the app grows.
 
-### ⚙️ Advanced Settings
+### `buildSrc/` (Build Logic)
 
-- **Flexible Timers**: Set custom deletion times from 5 minutes to 1 week
-- **Custom Folders**: Specify custom screenshot directories
-- **Manual/Automatic Mode**: Switch between decision modes anytime
-- **Debug Console**: Built-in logging and troubleshooting tools
+Centralized locations for build configuration to ensure consistency.
 
-### 🔧 Technical Excellence
+- **`Coordinates.kt`**: Single source of truth for **App ID**, **Version**, and **SDK levels**. Edit this file to rename your project!
 
-- **Background Service**: Efficient foreground service for 24/7 monitoring
-- **WorkManager Integration**: Reliable scheduled deletion tasks
-- **Room Database**: Local storage for screenshot metadata
-- **Modern Android**: Built with Kotlin, Material Design 3, and latest APIs
+```kotlin
+object Coordinates {
+    const val APP_PACKAGE = "com.example.fridge" // <--- Change this!
+    // ...
+}
+```
 
-## 📱 Screenshots
+### `gradle/`
 
-*Coming soon - add screenshots of the app in action*
+- **`libs.versions.toml`**: Gradle Version Catalog. Manage all library versions and plugins here.
 
-## 🚀 Installation
+## 🛠 Project Configuration
 
-### From GitHub Releases
+### 1. Identity
 
-1. Go to [Releases](https://github.com/DarkPhilosophy/Ko/releases)
-2. Download the latest `screenshot-manager-debug.apk` or `screenshot-manager-release.apk`
-3. Install on your Android device (enable "Install unknown apps" if needed)
+Modify `buildSrc/src/main/kotlin/Coordinates.kt` to set your unique package name and version.
 
-### Build from Source
+### 2. Signing & Secrets
 
-See [QUICK_START.md](QUICK_START.md) for detailed build instructions.
+- **Keystore**: A sample `keystore.jks.example` is provided in `app/`. Rename to `keystore.jks` and generate your own key for release builds.
+- **Google Services**: If using Firebase, place your `google-services.json` in `app/`. An example is provided.
+- **Local Properties**: Copy `local.properties.example` to `local.properties` and set your `sdk.dir` or `cmake.dir` if needed.
 
-## 📋 Requirements
+## ✅ Quality Control
 
-- **Android**: API 24+ (Android 7.0 or higher)
-- **Permissions**:
-  - Storage access (for reading screenshots)
-  - Notifications (for deletion timers)
-  - Display over other apps (for manual mode overlay)
+This template comes pre-configured with:
 
-## 🛠️ Usage
+- **KtLint (via Spotless)**: Enforces code style.
+  - Run: `./gradlew spotlessApply`
+- **Detekt**: Static code analysis.
+  - Run: `./gradlew detekt`
+  - Config: `detekt.yml` (derived from the strict Snapify standard).
 
-1. **Grant Permissions**: Allow all required permissions when prompted
-2. **Choose Mode**:
-   - **Manual**: Decide for each screenshot via overlay
-   - **Automatic**: Set timer for all screenshots
-3. **Monitor**: App runs in background, detecting new screenshots
-4. **Manage**: View and organize screenshots in the main app
+## 🚀 Workflows (CI/CD)
 
-### Manual Mode
+Located in `.github/workflows/`, inheriting the robust Snapify pipeline:
 
-- Take a screenshot
-- Overlay appears with options: Keep, or set deletion timer
-- Choose your preference
-
-### Automatic Mode
-
-- Set deletion time in settings
-- All screenshots automatically marked for deletion
-- Receive notifications with countdown
-- Tap "Keep" in notification to save important ones
-
-## 🔧 Configuration
-
-Access settings via the floating action button:
-
-- **Deletion Time**: Set automatic deletion timer
-- **Operation Mode**: Toggle between Manual/Automatic
-- **Custom Folder**: Specify alternative screenshot directory
-- **Notifications**: Enable/disable alerts
-- **Debug Console**: View logs and troubleshoot
+- **Build & Test**: Runs on every pull request.
+- **Linting**: Checks formatting and Detekt rules.
+- **Release**: Automatically builds APKs/Bundles on version tags.
 
 ## 🤝 Contributing
 
-We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+1. Fork the repo.
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Built with ❤️ using Kotlin and Android Jetpack
-- Material Design 3 for beautiful UI
-- WorkManager for reliable background tasks
-
----
-
-**Made with ❤️ by [Adalbert Alexandru Ungureanu](https://github.com/DarkPhilosophy)**
-
+2. Create a feature branch.
+3. Commit changes (`git commit -m "Add feature"`).
+4. Push to branch (`git push origin my-feature`).
+5. Open a Pull Request.
