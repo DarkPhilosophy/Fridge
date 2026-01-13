@@ -49,8 +49,9 @@ $CLEAN_CHANGELOG
 
     # 4. Replace in README using perl for multiline handling
     if [ -f "$README_FILE" ]; then
+        export NEW_BLOCK
         # Update Content
-        perl -i -0777 -pe "s|<!-- LATEST-VERSION-START -->.*<!-- LATEST-VERSION-END -->|$(echo "$NEW_BLOCK" | sed 's/|/\\|/g')|gs" "$README_FILE"
+        perl -i -0777 -pe 's|<!-- LATEST-VERSION-START -->.*<!-- LATEST-VERSION-END -->|$ENV{NEW_BLOCK}|gs' "$README_FILE"
         echo "✅ Updated Latest Update section in README.md"
 
         # Update Badge
@@ -81,16 +82,9 @@ $CLEAN_CHANGELOG
                     # Replace in Action Badges
                     sed -i "s|github.com/[^/]*/[^/]*/actions|github.com/$FULL_REPO/actions|g" "$README_FILE"
                     
-                    # Replace in Version Badge target (if it points to the repo root)
-                    # Use a specifically crafted sed to avoid breaking other links if possible, 
-                    # but typically standardizing all repo links to current repo is safe for a template.
-                    # We'll target the Version Badge link specifically for safety if it matches standard pattern
-                    # Or just general cleanup:
-                    # sed -i "s|github.com/DarkPhilosophy/Ko|github.com/$FULL_REPO|g" "$README_FILE"
-                    # sed -i "s|github.com/DarkPhilosophy/android-Snapify|github.com/$FULL_REPO|g" "$README_FILE"
-                    
-                    # Dynamic replacement for any previous repo that was there (assuming it was formatted as URL)
-                    # We explicitly target the known template defaults to be safe, creating a pure clean slate
+                    # Dynamic replacement for known previous repo strings if present
+                    # This ensures that even if you fork "DarkPhilosophy/android-Snapify", 
+                    # the script will update it to "Your/Fork" on first run.
                     sed -i "s|DarkPhilosophy/Ko|$FULL_REPO|g" "$README_FILE"
                     sed -i "s|DarkPhilosophy/android-Snapify|$FULL_REPO|g" "$README_FILE"
                     
