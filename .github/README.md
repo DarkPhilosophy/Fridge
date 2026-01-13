@@ -51,12 +51,13 @@ Configuration cache entry stored.
 
      ```kotlin
      object Coordinates {
-         const val APP_PACKAGE = "com.your.package" // Update this!
-         const val APP_VERSION_NAME = "1.0.0"
+         const val APP_PACKAGE = "com.example.your" // Update this!
+         // Version is read dynamically from version.properties
      }
      ```
 
    - Rename packages in `app/src/main/kotlin/` to match your new package ID.
+   - Rename `YourApplication` and `YourMainActivity` to your app's name.
 3. **Setup Secrets**:
    - `app/keystore.jks.example` -> `app/keystore.jks`
    - `app/google-services.json.example` -> `app/google-services.json`
@@ -65,25 +66,26 @@ Configuration cache entry stored.
 ## 📂 Project Structure
 
 - **app/**: Main application module (Hilt + Compose).
+  - `src/main/kotlin/com/example/your`: Placeholder package (rename this!).
 - **core/**: Shared domain logic module.
 - **buildSrc/**: Kotlin DSL build logic & version catalog.
 - **scripts/**: Automation scripts.
-  - `update_readme.sh`: Updates the README with latest lint status and version info.
+  - `update_version_status.sh`: Updates the README with latest version info from `version.properties`.
   - `update_lint_status.sh`: Runs lint checks and updates badge status.
 
-## 🛠 Automation & Scripts
+## 🛠 Features & Configuration
 
-This template includes helper scripts in `/scripts/` to maintain project health:
+### version.properties
 
-### `scripts/update_lint_status.sh`
+Project versioning is centralized in `version.properties`.
+- **Logic**: `Coordinates.kt` dynamically reads this file at build time.
+- **Usage**: Simply edit `version.major`, `version.minor`, etc., and the build will pick it up immediately (no Gradle sync required for version changes).
 
-Runs `./gradlew detekt spotlessCheck` and updates the **Linting Status** section in this README with the result (Passing/Failing) and a timestamp.
-- **Usage**: Automatically run by CI, or run locally: `./scripts/update_lint_status.sh`
+### CI/CD Pipelines
 
-### `scripts/update_readme.sh`
-
-Updates the **Latest Version** section in this README by parsing `version.properties`.
-- **Usage**: `./scripts/update_readme.sh`
+Located in `.github/workflows/`:
+- **build-apk.yaml**: automatically builds Debug/Release APKs when a tag is pushed.
+- **lint.yaml**: Ensures code quality (Detekt/Spotless) on PRs.
 
 ## 🤝 Contributing
 
@@ -92,4 +94,3 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for details on code style (KtLint/Detekt)
 **Made with ❤️ by [Adalbert Alexandru Ungureanu](https://github.com/DarkPhilosophy)**
 
 <!-- PERSONAL-README-END -->
-

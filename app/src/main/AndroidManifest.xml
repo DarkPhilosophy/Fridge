@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
-        android:name=".FridgeApplication"
+        android:name=".YourApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="${appName}"
@@ -12,7 +12,7 @@
         android:theme="@style/Theme.Fridge"
         tools:targetApi="31">
         <activity
-            android:name=".FridgeMainActivity"
+            android:name=".YourMainActivity"
             android:exported="true"
             android:theme="@style/Theme.Fridge">
             <intent-filter>
