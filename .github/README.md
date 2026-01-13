@@ -1,96 +1,95 @@
-# Fridge ❄️
+# Screenshot Manager
 
-A robust Android project template extracted from `ro.snapify`.
-Ready for GitHub, CI/CD, and modern Android development (Compose, Hilt, Detekt).
+<!-- LATEST-BUILD-STATUS-START -->
+[![PreBuild](https://img.shields.io/badge/PreBuild-Passing-brightgreen)](https://github.com/DarkPhilosophy/Ko/actions)
+[![Build Status](https://github.com/DarkPhilosophy/Ko/actions/workflows/build-apk.yaml/badge.svg)](https://github.com/DarkPhilosophy/Ko/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Version 1.0.0](https://img.shields.io/badge/Version-1.0.0-blue.svg)](https://github.com/DarkPhilosophy/android-Snapify)
+<!-- LATEST-BUILD-STATUS-END -->
 
-## 🚀 Getting Started
+A modern, intelligent Android application to automatically manage and organize your screenshots. Keep what matters, delete the rest automatically.
 
-### 1. Use this Template
-Click "Use this template" on GitHub or fork/clone this repository.
+<!-- LATEST-VERSION-START -->
+Example template version output:
+### Latest Update (v1.0.0)
+- **New Feature**: Added support for custom folder detection
+<!-- LATEST-VERSION-END -->
 
-### 2. Configure Your App
-Modify `buildSrc/src/main/kotlin/Coordinates.kt` to set your project identity:
-```kotlin
-// Change these default values!
-val APP_PACKAGE = "com.example.fridge" 
-val APP_VERSION_NAME = "1.0.0"
+## Validation Status
+<!-- LINT-RESULT-START -->
+### Linting Status
+> **Status**: ✅ **Passing**  
+> **Last Updated**: 2026-01-13 18:22:55 UTC  
+> **Summary**: 0 errors, 0 warnings
+
+<details>
+<summary>Click to view full lint output</summary>
+
+```
+Example template output:
+Starting a Gradle Daemon (subsequent builds will be faster)
+Calculating task graph as no cached configuration is available for tasks: spotlessCheck detekt test
+
+
+BUILD SUCCESSFUL in 1m 45s
+120 actionable tasks: 120 executed
+Configuration cache entry stored.
 ```
 
-### 3. Sync & Build
-Run `./gradlew assembleDebug` to verify the setup.
+</details>
+<!-- LINT-RESULT-END -->
 
+<!-- PERSONAL-README-START -->
+
+# ❄️ Fridge Android Template
+
+## 🚀 Usage Guide
+
+1. **Fork/Use Template**: Create your new repo from this one.
+2. **Rename Identity**:
+   - Edit `buildSrc/src/main/kotlin/Coordinates.kt`:
+
+     ```kotlin
+     object Coordinates {
+         const val APP_PACKAGE = "com.your.package" // Update this!
+         const val APP_VERSION_NAME = "1.0.0"
+     }
+     ```
+
+   - Rename packages in `app/src/main/kotlin/` to match your new package ID.
+3. **Setup Secrets**:
+   - `app/keystore.jks.example` -> `app/keystore.jks`
+   - `app/google-services.json.example` -> `app/google-services.json`
+   - `local.properties.example` -> `local.properties` (set `sdk.dir`)
 
 ## 📂 Project Structure
 
-A modular architecture designed for scalability and separation of concerns.
+- **app/**: Main application module (Hilt + Compose).
+- **core/**: Shared domain logic module.
+- **buildSrc/**: Kotlin DSL build logic & version catalog.
+- **scripts/**: Automation scripts.
+  - `update_readme.sh`: Updates the README with latest lint status and version info.
+  - `update_lint_status.sh`: Runs lint checks and updates badge status.
 
-### `app/` (Application Module)
+## 🛠 Automation & Scripts
 
-The entry point of the application. Contains the UI logic and Android-specific components.
+This template includes helper scripts in `/scripts/` to maintain project health:
 
-- **`src/main/kotlin/`**:
-  - `FridgeApplication.kt`: Hilt-enabled Application class.
-  - `FridgeMainActivity.kt`: Main entry point hosting the Compose content.
-- **`build.gradle.kts`**: Module-specific configuration (plugins, dependencies).
+### `scripts/update_lint_status.sh`
 
-### `core/` (Core Module)
+Runs `./gradlew detekt spotlessCheck` and updates the **Linting Status** section in this README with the result (Passing/Failing) and a timestamp.
+- **Usage**: Automatically run by CI, or run locally: `./scripts/update_lint_status.sh`
 
-Contains shared business logic, utility classes, and domain models.
+### `scripts/update_readme.sh`
 
-- **Purpose**: Keep this module pure and reusable across different feature modules if the app grows.
-
-### `buildSrc/` (Build Logic)
-
-Centralized locations for build configuration to ensure consistency.
-
-- **`Coordinates.kt`**: Single source of truth for **App ID**, **Version**, and **SDK levels**. Edit this file to rename your project!
-
-```kotlin
-object Coordinates {
-    const val APP_PACKAGE = "com.example.fridge" // <--- Change this!
-    // ...
-}
-```
-
-### `gradle/`
-
-- **`libs.versions.toml`**: Gradle Version Catalog. Manage all library versions and plugins here.
-
-## 🛠 Project Configuration
-
-### 1. Identity
-
-Modify `buildSrc/src/main/kotlin/Coordinates.kt` to set your unique package name and version.
-
-### 2. Signing & Secrets
-
-- **Keystore**: A sample `keystore.jks.example` is provided in `app/`. Rename to `keystore.jks` and generate your own key for release builds.
-- **Google Services**: If using Firebase, place your `google-services.json` in `app/`. An example is provided.
-- **Local Properties**: Copy `local.properties.example` to `local.properties` and set your `sdk.dir` or `cmake.dir` if needed.
-
-## ✅ Quality Control
-
-This template comes pre-configured with:
-
-- **KtLint (via Spotless)**: Enforces code style.
-  - Run: `./gradlew spotlessApply`
-- **Detekt**: Static code analysis.
-  - Run: `./gradlew detekt`
-  - Config: `detekt.yml` (derived from the strict Snapify standard).
-
-## 🚀 Workflows (CI/CD)
-
-Located in `.github/workflows/`, inheriting the robust Snapify pipeline:
-
-- **Build & Test**: Runs on every pull request.
-- **Linting**: Checks formatting and Detekt rules.
-- **Release**: Automatically builds APKs/Bundles on version tags.
+Updates the **Latest Version** section in this README by parsing `version.properties`.
+- **Usage**: `./scripts/update_readme.sh`
 
 ## 🤝 Contributing
 
-1. Fork the repo.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for details on code style (KtLint/Detekt) and PR process.
 
-2. Create a feature branch.
-3. Commit changes (`git commit -m "Add feature"`).
-4. Push to branch (`git push origin my-feature`).
-5. Open a Pull Request.
+**Made with ❤️ by [Adalbert Alexandru Ungureanu](https://github.com/DarkPhilosophy)**
+
+<!-- PERSONAL-README-END -->
+
