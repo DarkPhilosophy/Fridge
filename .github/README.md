@@ -69,7 +69,7 @@ Configuration cache entry stored.
   - `src/main/kotlin/com/example/your`: Placeholder package (rename this!).
 - **core/**: Shared domain logic module.
 - **buildSrc/**: Kotlin DSL build logic & version catalog.
-- **scripts/**: Automation scripts.
+- **scripts/**: Automation scripts (hidden directory `.scripts/`).
   - `update_version_status.sh`: Updates the README with latest version info from `version.properties`.
   - `update_lint_status.sh`: Runs lint checks and updates badge status.
 
