@@ -22,7 +22,7 @@ A smart, modern Android application for managing your fridge inventory. Track it
 <!-- LINT-RESULT-START -->
 ### Linting Status
 > **Status**: ✅ **Passing**  
-> **Last Updated**: 2026-01-14 20:24:27 UTC  
+> **Last Updated**: 2026-01-14 20:30:53 UTC  
 > **Summary**: 0 errors, 0 warnings
 
 <details>
@@ -71,22 +71,22 @@ Property 'naming>FunctionNaming>ignoreOverridden' is deprecated. This configurat
 > Task :core:processDebugNavigationResources
 > Task :app:processDebugNavigationResources
 > Task :core:detekt
+> Task :app:mergeDebugResources
 > Task :app:generateDebugBuildConfig
 > Task :core:writeDebugAarMetadata
-> Task :core:parseDebugLocalResources
-> Task :app:parseDebugLocalResources
-> Task :core:generateDebugRFile
 > Task :app:compileDebugNavigationResources
-> Task :app:mapDebugSourceSetPaths
 > Task :app:checkDebugAarMetadata
+> Task :app:mapDebugSourceSetPaths
 > Task :app:extractDeepLinksDebug
+> Task :core:parseDebugLocalResources
 > Task :core:extractDeepLinksDebug
 > Task :app:createDebugCompatibleScreenManifests
-> Task :core:checkKotlinGradlePluginConfigurationErrors SKIPPED
-> Task :app:mergeDebugResources
 > Task :core:compileDebugLibraryResources
+> Task :core:checkKotlinGradlePluginConfigurationErrors SKIPPED
 > Task :core:generateDebugBuildConfig
 > Task :core:javaPreCompileDebug
+> Task :core:generateDebugRFile
+> Task :app:parseDebugLocalResources
 > Task :core:processDebugManifest
 > Task :app:javaPreCompileDebug
 > Task :app:preDebugUnitTestBuild UP-TO-DATE
@@ -97,31 +97,31 @@ Property 'naming>FunctionNaming>ignoreOverridden' is deprecated. This configurat
 > Task :app:generateReleaseResValues
 > Task :app:generateReleaseResources
 > Task :app:injectCrashlyticsMappingFileIdRelease
-> Task :app:extractReleaseVersionControlInfo
-> Task :app:injectCrashlyticsVersionControlInfoRelease
+> Task :app:dataBindingGenBaseClassesDebug
 > Task :app:processReleaseGoogleServices
 > Task :core:preReleaseBuild UP-TO-DATE
 > Task :core:generateReleaseResValues
 > Task :core:generateReleaseResources
 > Task :core:packageReleaseResources
-> Task :app:dataBindingGenBaseClassesDebug
-> Task :app:packageReleaseResources
 > Task :core:processReleaseNavigationResources
-> Task :app:processReleaseNavigationResources
 > Task :app:processDebugMainManifest
-> Task :app:parseReleaseLocalResources
+> Task :app:processReleaseNavigationResources
+> Task :app:extractReleaseVersionControlInfo
+> Task :app:injectCrashlyticsVersionControlInfoRelease
 > Task :core:parseReleaseLocalResources
+> Task :app:packageReleaseResources
+> Task :app:parseReleaseLocalResources
 > Task :core:generateReleaseRFile
 > Task :app:generateReleaseBuildConfig
 > Task :core:writeReleaseAarMetadata
 > Task :app:checkReleaseAarMetadata
 > Task :app:compileReleaseNavigationResources
-> Task :app:mapReleaseSourceSetPaths
 > Task :app:processDebugManifest
+> Task :app:mapReleaseSourceSetPaths
+> Task :app:processDebugManifestForPackage
 > Task :app:createReleaseCompatibleScreenManifests
 > Task :app:extractDeepLinksRelease
 > Task :core:extractDeepLinksRelease
-> Task :app:processDebugManifestForPackage
 > Task :core:processReleaseManifest
 > Task :app:processReleaseMainManifest
 > Task :app:processReleaseManifest
@@ -142,58 +142,58 @@ Property 'naming>FunctionNaming>ignoreOverridden' is deprecated. This configurat
 > Task :app:mergeReleaseResources
 > Task :app:dataBindingGenBaseClassesRelease
 > Task :app:processReleaseResources
-> Task :core:compileReleaseKotlin
-> Task :core:processReleaseJavaRes
 > Task :core:compileDebugKotlin
+> Task :core:compileReleaseKotlin
 > Task :core:processDebugJavaRes
-> Task :core:compileReleaseJavaWithJavac
+> Task :core:processReleaseJavaRes
 > Task :core:compileDebugJavaWithJavac
+> Task :core:compileReleaseJavaWithJavac
 > Task :core:bundleLibRuntimeToJarRelease
+> Task :core:bundleLibRuntimeToJarDebug
 > Task :core:bundleLibCompileToJarRelease
 > Task :core:bundleLibCompileToJarDebug
-> Task :core:bundleLibRuntimeToJarDebug
-> Task :core:createFullJarRelease
 > Task :core:createFullJarDebug
-> Task :core:compileReleaseUnitTestKotlin NO-SOURCE
+> Task :core:createFullJarRelease
 > Task :core:compileDebugUnitTestKotlin NO-SOURCE
-> Task :core:compileReleaseUnitTestJavaWithJavac NO-SOURCE
-> Task :core:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :core:compileReleaseUnitTestKotlin NO-SOURCE
 > Task :core:processDebugUnitTestJavaRes NO-SOURCE
+> Task :core:compileDebugUnitTestJavaWithJavac NO-SOURCE
 > Task :core:testDebugUnitTest NO-SOURCE
+> Task :core:compileReleaseUnitTestJavaWithJavac NO-SOURCE
 > Task :core:processReleaseUnitTestJavaRes NO-SOURCE
 > Task :core:testReleaseUnitTest NO-SOURCE
 > Task :core:test UP-TO-DATE
-> Task :app:kspReleaseKotlin
 > Task :app:kspDebugKotlin
-
-> Task :app:compileReleaseKotlin
-w: file:///home/runner/work/Fridge/Fridge/app/src/main/kotlin/ro/fridge/di/DatabaseModule.kt:25:11 'fun fallbackToDestructiveMigration(): RoomDatabase.Builder<AppDatabase>' is deprecated. Replace by overloaded version with parameter to indicate if all tables should be dropped or not.
-w: file:///home/runner/work/Fridge/Fridge/app/src/main/kotlin/ro/fridge/ui/item/ItemDetailScreen.kt:26:44 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
-w: file:///home/runner/work/Fridge/Fridge/app/src/main/kotlin/ro/fridge/ui/theme/Theme.kt:61:20 'var statusBarColor: Int' is deprecated. Deprecated in Java.
+> Task :app:kspReleaseKotlin
 
 > Task :app:compileDebugKotlin
 w: file:///home/runner/work/Fridge/Fridge/app/src/main/kotlin/ro/fridge/di/DatabaseModule.kt:25:11 'fun fallbackToDestructiveMigration(): RoomDatabase.Builder<AppDatabase>' is deprecated. Replace by overloaded version with parameter to indicate if all tables should be dropped or not.
 w: file:///home/runner/work/Fridge/Fridge/app/src/main/kotlin/ro/fridge/ui/item/ItemDetailScreen.kt:26:44 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
 w: file:///home/runner/work/Fridge/Fridge/app/src/main/kotlin/ro/fridge/ui/theme/Theme.kt:61:20 'var statusBarColor: Int' is deprecated. Deprecated in Java.
 
-> Task :app:compileDebugJavaWithJavac
+> Task :app:compileReleaseKotlin
+w: file:///home/runner/work/Fridge/Fridge/app/src/main/kotlin/ro/fridge/di/DatabaseModule.kt:25:11 'fun fallbackToDestructiveMigration(): RoomDatabase.Builder<AppDatabase>' is deprecated. Replace by overloaded version with parameter to indicate if all tables should be dropped or not.
+w: file:///home/runner/work/Fridge/Fridge/app/src/main/kotlin/ro/fridge/ui/item/ItemDetailScreen.kt:26:44 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/Fridge/Fridge/app/src/main/kotlin/ro/fridge/ui/theme/Theme.kt:61:20 'var statusBarColor: Int' is deprecated. Deprecated in Java.
+
 > Task :app:compileReleaseJavaWithJavac
+> Task :app:compileDebugJavaWithJavac
 > Task :app:hiltAggregateDepsDebug
 > Task :app:hiltAggregateDepsRelease
-> Task :app:hiltJavaCompileDebug
 > Task :app:hiltJavaCompileRelease
+> Task :app:hiltJavaCompileDebug
 > Task :app:processDebugJavaRes
 > Task :app:processReleaseJavaRes
+> Task :app:bundleReleaseClassesToCompileJar
 > Task :app:bundleDebugClassesToCompileJar
 > Task :app:kspDebugUnitTestKotlin NO-SOURCE
+> Task :app:kspReleaseUnitTestKotlin NO-SOURCE
 > Task :app:compileDebugUnitTestKotlin NO-SOURCE
 > Task :app:compileDebugUnitTestJavaWithJavac NO-SOURCE
-> Task :app:bundleReleaseClassesToCompileJar
-> Task :app:kspReleaseUnitTestKotlin NO-SOURCE
 > Task :app:compileReleaseUnitTestKotlin NO-SOURCE
 > Task :app:compileReleaseUnitTestJavaWithJavac NO-SOURCE
-> Task :app:hiltAggregateDepsReleaseUnitTest
 > Task :app:hiltAggregateDepsDebugUnitTest
+> Task :app:hiltAggregateDepsReleaseUnitTest
 > Task :app:hiltJavaCompileDebugUnitTest NO-SOURCE
 > Task :app:hiltJavaCompileReleaseUnitTest NO-SOURCE
 > Task :app:processDebugUnitTestJavaRes NO-SOURCE
@@ -202,12 +202,12 @@ w: file:///home/runner/work/Fridge/Fridge/app/src/main/kotlin/ro/fridge/ui/theme
 > Task :app:transformReleaseClassesWithAsm
 > Task :app:bundleReleaseClassesToRuntimeJar
 > Task :app:bundleDebugClassesToRuntimeJar
-> Task :app:transformDebugUnitTestClassesWithAsm
-> Task :app:testDebugUnitTest NO-SOURCE
 > Task :app:transformReleaseUnitTestClassesWithAsm
 > Task :app:testReleaseUnitTest NO-SOURCE
+> Task :app:transformDebugUnitTestClassesWithAsm
+> Task :app:testDebugUnitTest NO-SOURCE
 > Task :app:test UP-TO-DATE
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/lint_step-1768422201328.json
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/lint_step-1768422576571.json
 
 [Incubating] Problems report is available at: file:///home/runner/work/Fridge/Fridge/build/reports/problems/problems-report.html
 
@@ -217,7 +217,7 @@ You can use '--warning-mode all' to show the individual deprecation warnings and
 
 For more on this, please refer to https://docs.gradle.org/9.2.0/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
 
-BUILD SUCCESSFUL in 1m 9s
+BUILD SUCCESSFUL in 1m 23s
 120 actionable tasks: 120 executed
 Configuration cache entry stored.
 ```
