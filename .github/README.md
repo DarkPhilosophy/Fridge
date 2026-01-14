@@ -22,7 +22,7 @@ A smart, modern Android application for managing your fridge inventory. Track it
 <!-- LINT-RESULT-START -->
 ### Linting Status
 > **Status**: ✅ **Passing**  
-> **Last Updated**: 2026-01-14 20:10:31 UTC  
+> **Last Updated**: 2026-01-14 20:24:27 UTC  
 > **Summary**: 0 errors, 0 warnings
 
 <details>
@@ -48,9 +48,7 @@ Calculating task graph as no cached configuration is available for tasks: spotle
 > Task :spotlessInternalRegisterDependencies
 > Task :app:spotlessKotlin
 > Task :app:spotlessKotlinCheck
-> Task :app:spotlessKotlinGradle
-> Task :app:spotlessKotlinGradleCheck
-> Task :app:spotlessCheck
+> Task :app:dataBindingMergeDependencyArtifactsDebug
 > Task :app:generateDebugResValues
 > Task :app:generateDebugResources
 > Task :app:injectCrashlyticsMappingFileIdDebug
@@ -66,23 +64,26 @@ Calculating task graph as no cached configuration is available for tasks: spotle
 Property 'style>ForbiddenComment>values' is deprecated. Use \`comments\` instead, make sure you escape your text for Regular Expressions..
 Property 'naming>FunctionNaming>ignoreOverridden' is deprecated. This configuration is ignored and will be removed in the future.
 
-> Task :core:detekt
-> Task :core:processDebugNavigationResources
+> Task :app:spotlessKotlinGradle
+> Task :app:spotlessKotlinGradleCheck
+> Task :app:spotlessCheck
 > Task :app:packageDebugResources
-> Task :core:parseDebugLocalResources
-> Task :core:generateDebugRFile
+> Task :core:processDebugNavigationResources
+> Task :app:processDebugNavigationResources
+> Task :core:detekt
 > Task :app:generateDebugBuildConfig
 > Task :core:writeDebugAarMetadata
-> Task :app:processDebugNavigationResources
-> Task :app:dataBindingMergeDependencyArtifactsDebug
-> Task :app:checkDebugAarMetadata
-> Task :app:mapDebugSourceSetPaths
-> Task :app:createDebugCompatibleScreenManifests
+> Task :core:parseDebugLocalResources
 > Task :app:parseDebugLocalResources
+> Task :core:generateDebugRFile
+> Task :app:compileDebugNavigationResources
+> Task :app:mapDebugSourceSetPaths
+> Task :app:checkDebugAarMetadata
 > Task :app:extractDeepLinksDebug
 > Task :core:extractDeepLinksDebug
-> Task :app:compileDebugNavigationResources
+> Task :app:createDebugCompatibleScreenManifests
 > Task :core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:mergeDebugResources
 > Task :core:compileDebugLibraryResources
 > Task :core:generateDebugBuildConfig
 > Task :core:javaPreCompileDebug
@@ -96,7 +97,6 @@ Property 'naming>FunctionNaming>ignoreOverridden' is deprecated. This configurat
 > Task :app:generateReleaseResValues
 > Task :app:generateReleaseResources
 > Task :app:injectCrashlyticsMappingFileIdRelease
-> Task :app:processDebugMainManifest
 > Task :app:extractReleaseVersionControlInfo
 > Task :app:injectCrashlyticsVersionControlInfoRelease
 > Task :app:processReleaseGoogleServices
@@ -104,11 +104,11 @@ Property 'naming>FunctionNaming>ignoreOverridden' is deprecated. This configurat
 > Task :core:generateReleaseResValues
 > Task :core:generateReleaseResources
 > Task :core:packageReleaseResources
-> Task :app:processDebugManifest
-> Task :app:processDebugManifestForPackage
+> Task :app:dataBindingGenBaseClassesDebug
 > Task :app:packageReleaseResources
 > Task :core:processReleaseNavigationResources
 > Task :app:processReleaseNavigationResources
+> Task :app:processDebugMainManifest
 > Task :app:parseReleaseLocalResources
 > Task :core:parseReleaseLocalResources
 > Task :core:generateReleaseRFile
@@ -117,61 +117,61 @@ Property 'naming>FunctionNaming>ignoreOverridden' is deprecated. This configurat
 > Task :app:checkReleaseAarMetadata
 > Task :app:compileReleaseNavigationResources
 > Task :app:mapReleaseSourceSetPaths
+> Task :app:processDebugManifest
 > Task :app:createReleaseCompatibleScreenManifests
 > Task :app:extractDeepLinksRelease
 > Task :core:extractDeepLinksRelease
+> Task :app:processDebugManifestForPackage
 > Task :core:processReleaseManifest
 > Task :app:processReleaseMainManifest
 > Task :app:processReleaseManifest
 > Task :app:processReleaseManifestForPackage
 > Task :core:compileReleaseLibraryResources
 > Task :core:generateReleaseBuildConfig
-> Task :app:mergeReleaseResources
-> Task :app:mergeDebugResources
-> Task :app:dataBindingGenBaseClassesRelease
-> Task :app:dataBindingGenBaseClassesDebug
-> Task :app:processReleaseResources
 > Task :app:processDebugResources
 > Task :core:javaPreCompileRelease
-> Task :app:preReleaseUnitTestBuild UP-TO-DATE
 > Task :app:javaPreCompileRelease
+> Task :app:preReleaseUnitTestBuild UP-TO-DATE
 > Task :app:javaPreCompileReleaseUnitTest
-> Task :core:preReleaseUnitTestBuild UP-TO-DATE
 > Task :core:preDebugUnitTestBuild UP-TO-DATE
 > Task :core:generateDebugUnitTestStubRFile
+> Task :core:javaPreCompileDebugUnitTest
+> Task :core:preReleaseUnitTestBuild UP-TO-DATE
 > Task :core:generateReleaseUnitTestStubRFile
 > Task :core:javaPreCompileReleaseUnitTest
-> Task :core:javaPreCompileDebugUnitTest
+> Task :app:mergeReleaseResources
+> Task :app:dataBindingGenBaseClassesRelease
+> Task :app:processReleaseResources
 > Task :core:compileReleaseKotlin
 > Task :core:processReleaseJavaRes
 > Task :core:compileDebugKotlin
 > Task :core:processDebugJavaRes
-> Task :core:compileDebugJavaWithJavac
 > Task :core:compileReleaseJavaWithJavac
-> Task :core:bundleLibRuntimeToJarDebug
-> Task :core:bundleLibCompileToJarDebug
+> Task :core:compileDebugJavaWithJavac
 > Task :core:bundleLibRuntimeToJarRelease
 > Task :core:bundleLibCompileToJarRelease
-> Task :core:createFullJarDebug
+> Task :core:bundleLibCompileToJarDebug
+> Task :core:bundleLibRuntimeToJarDebug
 > Task :core:createFullJarRelease
+> Task :core:createFullJarDebug
+> Task :core:compileReleaseUnitTestKotlin NO-SOURCE
 > Task :core:compileDebugUnitTestKotlin NO-SOURCE
+> Task :core:compileReleaseUnitTestJavaWithJavac NO-SOURCE
 > Task :core:compileDebugUnitTestJavaWithJavac NO-SOURCE
 > Task :core:processDebugUnitTestJavaRes NO-SOURCE
 > Task :core:testDebugUnitTest NO-SOURCE
-> Task :core:compileReleaseUnitTestKotlin NO-SOURCE
-> Task :core:compileReleaseUnitTestJavaWithJavac NO-SOURCE
 > Task :core:processReleaseUnitTestJavaRes NO-SOURCE
 > Task :core:testReleaseUnitTest NO-SOURCE
 > Task :core:test UP-TO-DATE
-> Task :app:kspDebugKotlin
 > Task :app:kspReleaseKotlin
+> Task :app:kspDebugKotlin
 
-> Task :app:compileDebugKotlin
+> Task :app:compileReleaseKotlin
 w: file:///home/runner/work/Fridge/Fridge/app/src/main/kotlin/ro/fridge/di/DatabaseModule.kt:25:11 'fun fallbackToDestructiveMigration(): RoomDatabase.Builder<AppDatabase>' is deprecated. Replace by overloaded version with parameter to indicate if all tables should be dropped or not.
 w: file:///home/runner/work/Fridge/Fridge/app/src/main/kotlin/ro/fridge/ui/item/ItemDetailScreen.kt:26:44 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
 w: file:///home/runner/work/Fridge/Fridge/app/src/main/kotlin/ro/fridge/ui/theme/Theme.kt:61:20 'var statusBarColor: Int' is deprecated. Deprecated in Java.
 
-> Task :app:compileReleaseKotlin
+> Task :app:compileDebugKotlin
 w: file:///home/runner/work/Fridge/Fridge/app/src/main/kotlin/ro/fridge/di/DatabaseModule.kt:25:11 'fun fallbackToDestructiveMigration(): RoomDatabase.Builder<AppDatabase>' is deprecated. Replace by overloaded version with parameter to indicate if all tables should be dropped or not.
 w: file:///home/runner/work/Fridge/Fridge/app/src/main/kotlin/ro/fridge/ui/item/ItemDetailScreen.kt:26:44 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
 w: file:///home/runner/work/Fridge/Fridge/app/src/main/kotlin/ro/fridge/ui/theme/Theme.kt:61:20 'var statusBarColor: Int' is deprecated. Deprecated in Java.
@@ -180,34 +180,34 @@ w: file:///home/runner/work/Fridge/Fridge/app/src/main/kotlin/ro/fridge/ui/theme
 > Task :app:compileReleaseJavaWithJavac
 > Task :app:hiltAggregateDepsDebug
 > Task :app:hiltAggregateDepsRelease
-> Task :app:hiltJavaCompileRelease
-> Task :app:processReleaseJavaRes
 > Task :app:hiltJavaCompileDebug
+> Task :app:hiltJavaCompileRelease
 > Task :app:processDebugJavaRes
-> Task :app:bundleReleaseClassesToCompileJar
+> Task :app:processReleaseJavaRes
 > Task :app:bundleDebugClassesToCompileJar
-> Task :app:kspReleaseUnitTestKotlin NO-SOURCE
 > Task :app:kspDebugUnitTestKotlin NO-SOURCE
-> Task :app:compileReleaseUnitTestKotlin NO-SOURCE
-> Task :app:compileReleaseUnitTestJavaWithJavac NO-SOURCE
 > Task :app:compileDebugUnitTestKotlin NO-SOURCE
 > Task :app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :app:bundleReleaseClassesToCompileJar
+> Task :app:kspReleaseUnitTestKotlin NO-SOURCE
+> Task :app:compileReleaseUnitTestKotlin NO-SOURCE
+> Task :app:compileReleaseUnitTestJavaWithJavac NO-SOURCE
 > Task :app:hiltAggregateDepsReleaseUnitTest
-> Task :app:hiltJavaCompileReleaseUnitTest NO-SOURCE
-> Task :app:processReleaseUnitTestJavaRes NO-SOURCE
 > Task :app:hiltAggregateDepsDebugUnitTest
 > Task :app:hiltJavaCompileDebugUnitTest NO-SOURCE
+> Task :app:hiltJavaCompileReleaseUnitTest NO-SOURCE
 > Task :app:processDebugUnitTestJavaRes NO-SOURCE
+> Task :app:processReleaseUnitTestJavaRes NO-SOURCE
 > Task :app:transformDebugClassesWithAsm
 > Task :app:transformReleaseClassesWithAsm
-> Task :app:bundleDebugClassesToRuntimeJar
 > Task :app:bundleReleaseClassesToRuntimeJar
+> Task :app:bundleDebugClassesToRuntimeJar
 > Task :app:transformDebugUnitTestClassesWithAsm
 > Task :app:testDebugUnitTest NO-SOURCE
 > Task :app:transformReleaseUnitTestClassesWithAsm
 > Task :app:testReleaseUnitTest NO-SOURCE
 > Task :app:test UP-TO-DATE
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/lint_step-1768421211721.json
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/lint_step-1768422201328.json
 
 [Incubating] Problems report is available at: file:///home/runner/work/Fridge/Fridge/build/reports/problems/problems-report.html
 
@@ -217,7 +217,7 @@ You can use '--warning-mode all' to show the individual deprecation warnings and
 
 For more on this, please refer to https://docs.gradle.org/9.2.0/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
 
-BUILD SUCCESSFUL in 3m 48s
+BUILD SUCCESSFUL in 1m 9s
 120 actionable tasks: 120 executed
 Configuration cache entry stored.
 ```
