@@ -18,7 +18,7 @@ object Coordinates {
         }
 
     val APP_PACKAGE: String
-        get() = properties.getProperty("app.package.name", "com.example.your")
+        get() = properties.getProperty("app.package.name", "ro.fridge")
 
     val APP_VERSION_NAME: String
         get() = "${properties.getProperty("version.major", "1")}.${properties.getProperty("version.minor", "0")}.${properties.getProperty("version.patch", "0")}"
