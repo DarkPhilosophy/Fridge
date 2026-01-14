@@ -86,7 +86,7 @@ $CLEAN_CHANGELOG
                     # This ensures that even if you fork "DarkPhilosophy/android-Snapify", 
                     # the script will update it to "Your/Fork" on first run.
                     sed -i "s|DarkPhilosophy/Ko|$FULL_REPO|g" "$README_FILE"
-                    sed -i "s|DarkPhilosophy/android-Snapify|$FULL_REPO|g" "$README_FILE"
+
                     
                     echo "✅ Updated Repo links to $FULL_REPO"
                 fi
