@@ -1,6 +1,6 @@
 @file:Suppress("TooManyFunctions", "MaxLineLength", "TooGenericExceptionCaught", "SwallowedException")
 
-package ro.snapify.util
+package ro.fridge.util
 
 import android.content.ContentResolver
 import android.content.Context

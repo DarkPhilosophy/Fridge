@@ -1,4 +1,4 @@
-package ro.snapify.util
+package ro.fridge.util
 
 import java.util.Locale
 import java.util.concurrent.TimeUnit

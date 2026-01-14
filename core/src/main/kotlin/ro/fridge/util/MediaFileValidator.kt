@@ -1,8 +1,8 @@
 @file:Suppress("TooGenericExceptionCaught", "SwallowedException")
 
-package ro.snapify.util
+package ro.fridge.util
 
-import ro.snapify.config.MediaMonitorConfig
+import ro.fridge.config.MediaMonitorConfig
 import java.io.File
 
 /**

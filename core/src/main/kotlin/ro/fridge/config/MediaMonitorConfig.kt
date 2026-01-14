@@ -1,4 +1,4 @@
-package ro.snapify.config
+package ro.fridge.config
 
 /**
  * Centralized configuration for media monitoring service.

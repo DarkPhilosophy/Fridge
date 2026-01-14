@@ -1,4 +1,4 @@
-package ro.snapify.data.entity
+package ro.fridge.data.entity
 
 import androidx.room.Entity
 import androidx.room.Index

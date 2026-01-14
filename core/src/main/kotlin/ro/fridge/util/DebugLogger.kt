@@ -1,4 +1,4 @@
-package ro.snapify.util
+package ro.fridge.util
 
 import android.content.Context
 import android.content.SharedPreferences
