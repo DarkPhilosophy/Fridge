@@ -1,10 +1,10 @@
 # Fridge Inventory App
 
 <!-- LATEST-BUILD-STATUS-START -->
-[![PreBuild](https://img.shields.io/badge/PreBuild-Passing-brightgreen)](https://github.com/DarkPhilosophy/Ko/actions)
-[![Build Status](https://github.com/DarkPhilosophy/Ko/actions/workflows/build-apk.yaml/badge.svg)](https://github.com/DarkPhilosophy/Ko/actions)
+[![PreBuild](https://img.shields.io/badge/PreBuild-Passing-brightgreen)](https://github.com/DarkPhilosophy/Fridge/actions)
+[![Build Status](https://github.com/DarkPhilosophy/Fridge/actions/workflows/ci.yaml/badge.svg)](https://github.com/DarkPhilosophy/Fridge/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version 1.0.0](https://img.shields.io/badge/Version-1.0.0-blue.svg)](https://github.com/DarkPhilosophy/android-Snapify)
+[![Version 1.0.0](https://img.shields.io/badge/Version-1.0.0-blue.svg)](https://github.com/DarkPhilosophy/Fridge)
 <!-- LATEST-BUILD-STATUS-END -->
 
 A smart, modern Android application for managing your fridge inventory. Track items, expiration dates, and get notifications to reduce food waste. Built with **Jetpack Compose**, **Firebase**, and **Room**.
