@@ -144,11 +144,25 @@ dependencies {
     // ConstraintLayout
     implementation(libs.constraintlayout)
 
+    // Firebase
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.analytics.ktx)
+    implementation(libs.firebase.auth.ktx)
+    implementation(libs.firebase.database.ktx)
+    implementation(libs.firebase.messaging.ktx)
+
+    // Google Sign In
+    implementation(libs.play.services.auth)
+
+    // ML Kit / GMS Code Scanner
+    implementation(libs.play.services.code.scanner)
+    implementation(libs.camera.camera2)
+    implementation(libs.camera.lifecycle)
+    implementation(libs.camera.view)
+
     // Room Database
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
-    // Firebase
-    implementation(libs.firebase.analytics.ktx)
     ksp(libs.room.compiler)
 
     // Lifecycle & ViewModel
@@ -174,10 +188,10 @@ dependencies {
     implementation(libs.activity.ktx)
     implementation(libs.fragment.ktx)
 
-    // RecyclerView
+    // RecyclerView (Removing if purely using Compose, but keeping for compatibility if needed)
     implementation(libs.recyclerview)
 
-    // Glide
+    // Glide (Keeping for legacy, but Coil is preferred for Compose)
     implementation(libs.glide)
     ksp(libs.glide.compiler)
 

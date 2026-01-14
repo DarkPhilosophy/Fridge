@@ -2,8 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-
-## [Unreleased]
-- Initial release of the project derived from the Fridge template.
+## [1.0.0] - 2026-01-14
+### Added
+- Initial Release of Fridge Inventory App.
+- Firebase Integration (Auth, Database, Messaging).
+- Offline support with Room.
+- Jetpack Compose UI (Inventory, Details, Auth).
+- Barcode Scanner integration.

@@ -35,6 +35,11 @@ ksp = "2.2.21-2.0.4"
 lazyColumnScrollbar = "2.2.0"
 composeDestinations = "1.10.1"
 lottie = "6.4.0"
+firebaseBom = "33.1.0"
+playServicesAuth = "21.2.0"
+playServicesCodeScanner = "16.1.0"
+mlkitBarcode = "17.2.0"
+camerax = "1.3.4"
 
 [libraries]
 startup-runtime = { group = "androidx.startup", name = "startup-runtime", version.ref = "startup" }
@@ -89,6 +94,16 @@ lazyColumnScrollbar = { group = "com.github.nanihadesuka", name = "LazyColumnScr
 composeDestinations-core = { group = "io.github.raamcosta.compose-destinations", name = "core", version.ref = "composeDestinations" }
 composeDestinations-ksp = { group = "io.github.raamcosta.compose-destinations", name = "ksp", version.ref = "composeDestinations" }
 lottie-compose = { group = "com.airbnb.android", name = "lottie-compose", version.ref = "lottie" }
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
+firebase-auth-ktx = { group = "com.google.firebase", name = "firebase-auth" }
+firebase-database-ktx = { group = "com.google.firebase", name = "firebase-database" }
+firebase-messaging-ktx = { group = "com.google.firebase", name = "firebase-messaging" }
+play-services-auth = { group = "com.google.android.gms", name = "play-services-auth", version.ref = "playServicesAuth" }
+play-services-code-scanner = { group = "com.google.android.gms", name = "play-services-code-scanner", version.ref = "playServicesCodeScanner" }
+mlkit-barcode-scanning = { group = "com.google.mlkit", name = "barcode-scanning", version.ref = "mlkitBarcode" }
+camera-camera2 = { group = "androidx.camera", name = "camera-camera2", version.ref = "camerax" }
+camera-lifecycle = { group = "androidx.camera", name = "camera-lifecycle", version.ref = "camerax" }
+camera-view = { group = "androidx.camera", name = "camera-view", version.ref = "camerax" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -97,3 +112,6 @@ detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
 google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
 google-firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "googleFirebaseCrashlytics" }
+
+[bundles]
+camerax = ["camera-camera2", "camera-lifecycle", "camera-view"]

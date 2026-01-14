@@ -1,4 +1,4 @@
-# Contributing to [Project Name]
+# Contributing to Fridge Inventory App
 
 Thank you for your interest in contributing!
 
