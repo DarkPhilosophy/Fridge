@@ -22,7 +22,7 @@ A smart, modern Android application for managing your fridge inventory. Track it
 <!-- LINT-RESULT-START -->
 ### Linting Status
 > **Status**: ❌ **Failing**  
-> **Last Updated**: 2026-01-14 19:25:41 UTC  
+> **Last Updated**: 2026-01-14 19:43:54 UTC  
 > **Summary**: Check output for details
 
 <details>
@@ -79,46 +79,30 @@ Calculating task graph as no cached configuration is available for tasks: spotle
 Property 'style>ForbiddenComment>values' is deprecated. Use \`comments\` instead, make sure you escape your text for Regular Expressions..
 Property 'naming>FunctionNaming>ignoreOverridden' is deprecated. This configuration is ignored and will be removed in the future.
 
-> Task :core:detekt FAILED
-/home/runner/work/Fridge/Fridge/core/src/main/kotlin/ro/fridge/events/AppEvents.kt:1:1: The package declaration does not match the actual file location. [InvalidPackageDeclaration]
-/home/runner/work/Fridge/Fridge/core/src/main/kotlin/ro/fridge/di/AppModule.kt:1:1: The package declaration does not match the actual file location. [InvalidPackageDeclaration]
-/home/runner/work/Fridge/Fridge/core/src/main/kotlin/ro/fridge/di/ReceiverEntryPoint.kt:1:1: The package declaration does not match the actual file location. [InvalidPackageDeclaration]
-/home/runner/work/Fridge/Fridge/core/src/main/kotlin/ro/fridge/data/dao/ScreenshotDao.kt:1:1: The package declaration does not match the actual file location. [InvalidPackageDeclaration]
-/home/runner/work/Fridge/Fridge/core/src/main/kotlin/ro/fridge/data/entity/MediaItem.kt:1:1: The package declaration does not match the actual file location. [InvalidPackageDeclaration]
-/home/runner/work/Fridge/Fridge/core/src/main/kotlin/ro/fridge/data/database/ScreenshotDatabase.kt:1:1: The package declaration does not match the actual file location. [InvalidPackageDeclaration]
-/home/runner/work/Fridge/Fridge/core/src/main/kotlin/ro/fridge/config/MediaMonitorConfig.kt:1:1: The package declaration does not match the actual file location. [InvalidPackageDeclaration]
-/home/runner/work/Fridge/Fridge/core/src/main/kotlin/ro/fridge/util/UriPathConverter.kt:3:1: The package declaration does not match the actual file location. [InvalidPackageDeclaration]
-/home/runner/work/Fridge/Fridge/core/src/main/kotlin/ro/fridge/util/DebugLogger.kt:1:1: The package declaration does not match the actual file location. [InvalidPackageDeclaration]
-/home/runner/work/Fridge/Fridge/core/src/main/kotlin/ro/fridge/util/MediaFileValidator.kt:3:1: The package declaration does not match the actual file location. [InvalidPackageDeclaration]
-/home/runner/work/Fridge/Fridge/core/src/main/kotlin/ro/fridge/util/PermissionUtils.kt:1:1: The package declaration does not match the actual file location. [InvalidPackageDeclaration]
-/home/runner/work/Fridge/Fridge/core/src/main/kotlin/ro/fridge/util/TimeUtils.kt:1:1: The package declaration does not match the actual file location. [InvalidPackageDeclaration]
-/home/runner/work/Fridge/Fridge/core/src/main/kotlin/ro/fridge/util/WorkManagerScheduler.kt:1:1: The package declaration does not match the actual file location. [InvalidPackageDeclaration]
-/home/runner/work/Fridge/Fridge/core/src/main/kotlin/ro/fridge/util/NotificationHelper.kt:1:1: The package declaration does not match the actual file location. [InvalidPackageDeclaration]
-
-
+> Task :core:detekt
 > Task :app:generateDebugBuildConfig
-> Task :core:writeDebugAarMetadata
 > Task :core:parseDebugLocalResources
-> Task :app:processDebugNavigationResources
-> Task :app:dataBindingMergeDependencyArtifactsDebug
 > Task :core:generateDebugRFile
 > Task :app:createDebugCompatibleScreenManifests
 > Task :core:extractDeepLinksDebug
-> Task :app:checkDebugAarMetadata
+> Task :core:writeDebugAarMetadata
+> Task :core:processDebugManifest
+> Task :core:compileDebugLibraryResources
 > Task :core:checkKotlinGradlePluginConfigurationErrors SKIPPED
 > Task :core:generateDebugBuildConfig
-> Task :core:compileDebugLibraryResources
+> Task :app:processDebugNavigationResources
 > Task :app:compileDebugNavigationResources
-> Task :core:processDebugManifest
 > Task :core:javaPreCompileDebug
+> Task :app:checkDebugAarMetadata
 > Task :app:preDebugUnitTestBuild UP-TO-DATE
-> Task :app:preReleaseBuild UP-TO-DATE
 > Task :app:javaPreCompileDebugUnitTest
-> Task :app:dataBindingMergeDependencyArtifactsRelease
-> Task :app:generateReleaseResValues
-> Task :app:generateReleaseResources
-> Task :app:injectCrashlyticsMappingFileIdRelease
+> Task :app:preReleaseBuild UP-TO-DATE
 > Task :app:buildKotlinToolingMetadata
+> Task :app:dataBindingMergeDependencyArtifactsRelease
+> Task :app:dataBindingMergeDependencyArtifactsDebug
+> Task :app:generateReleaseResValues
+> Task :app:injectCrashlyticsMappingFileIdRelease
+> Task :app:generateReleaseResources
 > Task :app:processReleaseGoogleServices FAILED
 > Task :core:preReleaseBuild UP-TO-DATE
 > Task :core:generateReleaseResValues
@@ -127,43 +111,43 @@ Property 'naming>FunctionNaming>ignoreOverridden' is deprecated. This configurat
 > Task :core:processReleaseNavigationResources
 > Task :app:processReleaseNavigationResources
 > Task :core:parseReleaseLocalResources
-> Task :app:extractReleaseVersionControlInfo
-> Task :app:injectCrashlyticsVersionControlInfoRelease
-> Task :app:generateReleaseBuildConfig
 > Task :core:generateReleaseRFile
+> Task :app:generateReleaseBuildConfig
 > Task :core:writeReleaseAarMetadata
-> Task :app:compileReleaseNavigationResources
-> Task :app:createReleaseCompatibleScreenManifests
-> Task :core:extractDeepLinksRelease
-> Task :core:processReleaseManifest
 > Task :app:checkReleaseAarMetadata
+> Task :app:compileReleaseNavigationResources
+> Task :app:extractReleaseVersionControlInfo
+> Task :app:createReleaseCompatibleScreenManifests
+> Task :app:injectCrashlyticsVersionControlInfoRelease
+> Task :core:extractDeepLinksRelease
 > Task :core:compileReleaseLibraryResources
 > Task :core:generateReleaseBuildConfig
+> Task :core:processReleaseManifest
 > Task :core:javaPreCompileRelease
 > Task :app:javaPreCompileRelease
 > Task :app:preReleaseUnitTestBuild UP-TO-DATE
-> Task :app:javaPreCompileDebug
-> Task :core:preDebugUnitTestBuild UP-TO-DATE
 > Task :app:javaPreCompileReleaseUnitTest
+> Task :core:preDebugUnitTestBuild UP-TO-DATE
+> Task :app:javaPreCompileDebug
 > Task :core:javaPreCompileDebugUnitTest
 > Task :core:preReleaseUnitTestBuild UP-TO-DATE
-> Task :core:generateDebugUnitTestStubRFile
 > Task :core:generateReleaseUnitTestStubRFile
+> Task :core:generateDebugUnitTestStubRFile
 > Task :core:javaPreCompileReleaseUnitTest
 > Task :core:compileReleaseKotlin
-> Task :core:compileDebugKotlin
 > Task :core:processReleaseJavaRes
+> Task :core:compileDebugKotlin
 > Task :core:processDebugJavaRes
 > Task :core:compileReleaseJavaWithJavac
 > Task :core:compileDebugJavaWithJavac
-> Task :core:bundleLibRuntimeToJarDebug
 > Task :core:bundleLibRuntimeToJarRelease
 > Task :core:bundleLibCompileToJarDebug
+> Task :core:bundleLibRuntimeToJarDebug
 > Task :core:bundleLibCompileToJarRelease
-> Task :core:compileReleaseUnitTestKotlin NO-SOURCE
-> Task :core:compileDebugUnitTestKotlin NO-SOURCE
-> Task :core:createFullJarDebug
 > Task :core:createFullJarRelease
+> Task :core:compileReleaseUnitTestKotlin NO-SOURCE
+> Task :core:createFullJarDebug
+> Task :core:compileDebugUnitTestKotlin NO-SOURCE
 > Task :core:compileReleaseUnitTestJavaWithJavac NO-SOURCE
 > Task :core:compileDebugUnitTestJavaWithJavac NO-SOURCE
 > Task :core:processDebugUnitTestJavaRes NO-SOURCE
@@ -171,11 +155,11 @@ Property 'naming>FunctionNaming>ignoreOverridden' is deprecated. This configurat
 > Task :core:testReleaseUnitTest NO-SOURCE
 > Task :core:testDebugUnitTest NO-SOURCE
 > Task :core:test UP-TO-DATE
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/lint_step-1768418431447.json
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/lint_step-1768419406674.json
 
 [Incubating] Problems report is available at: file:///home/runner/work/Fridge/Fridge/build/reports/problems/problems-report.html
 
-FAILURE: Build completed with 3 failures.
+FAILURE: Build completed with 2 failures.
 
 1: Task failed with an exception.
 -----------
@@ -192,19 +176,6 @@ Execution failed for task ':app:processDebugGoogleServices'.
 ==============================================================================
 
 2: Task failed with an exception.
------------
-* What went wrong:
-Execution failed for task ':core:detekt'.
-> Analysis failed with 14 weighted issues.
-
-* Try:
-> Run with --stacktrace option to get the stack trace.
-> Run with --info or --debug option to get more log output.
-> Run with --scan to generate a Build Scan (powered by Develocity).
-> Get more help at https://help.gradle.org.
-==============================================================================
-
-3: Task failed with an exception.
 -----------
 * What went wrong:
 Execution failed for task ':app:processReleaseGoogleServices'.
@@ -224,7 +195,7 @@ You can use '--warning-mode all' to show the individual deprecation warnings and
 
 For more on this, please refer to https://docs.gradle.org/9.2.0/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
 
-BUILD FAILED in 5m 21s
+BUILD FAILED in 7m 17s
 78 actionable tasks: 78 executed
 Configuration cache entry stored.
 ```
