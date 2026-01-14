@@ -11,7 +11,11 @@ A smart, modern Android application for managing your fridge inventory. Track it
 
 <!-- LATEST-VERSION-START -->
 ### Latest Update (v1.0.0)
-- **Initial Release**: Core inventory management, Firebase sync, and Offline support.
+- Initial Release of Fridge Inventory App.
+- Firebase Integration (Auth, Database, Messaging).
+- Offline support with Room.
+- Jetpack Compose UI (Inventory, Details, Auth).
+- Barcode Scanner integration.
 <!-- LATEST-VERSION-END -->
 
 ## Validation Status
