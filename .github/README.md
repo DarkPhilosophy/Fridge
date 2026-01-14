@@ -1,7 +1,7 @@
 # Fridge Inventory App
 
 <!-- LATEST-BUILD-STATUS-START -->
-[![PreBuild](https://img.shields.io/badge/PreBuild-Failing-red)](https://github.com/DarkPhilosophy/Fridge/actions)
+[![PreBuild](https://img.shields.io/badge/PreBuild-Passing-brightgreen)](https://github.com/DarkPhilosophy/Fridge/actions)
 [![Build Status](https://github.com/DarkPhilosophy/Fridge/actions/workflows/ci.yaml/badge.svg)](https://github.com/DarkPhilosophy/Fridge/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Version 1.0.0](https://img.shields.io/badge/Version-1.0.0-blue.svg)](https://github.com/DarkPhilosophy/Fridge)
@@ -21,26 +21,14 @@ A smart, modern Android application for managing your fridge inventory. Track it
 ## Validation Status
 <!-- LINT-RESULT-START -->
 ### Linting Status
-> **Status**: ❌ **Failing**  
-> **Last Updated**: 2026-01-14 19:43:54 UTC  
-> **Summary**: Check output for details
+> **Status**: ✅ **Passing**  
+> **Last Updated**: 2026-01-14 20:10:31 UTC  
+> **Summary**: 0 errors, 0 warnings
 
 <details>
 <summary>Click to view full lint output</summary>
 
-```Downloading https://services.gradle.org/distributions/gradle-9.2.0-bin.zip
-............10%.............20%.............30%.............40%.............50%.............60%.............70%.............80%.............90%.............100%
-
-Welcome to Gradle 9.2.0!
-
-Here are the highlights of this release:
- - Windows ARM support
- - Improved publishing APIs
- - Better guidance for dependency verification failures
-
-For more details see https://docs.gradle.org/9.2.0/release-notes.html
-
-Starting a Gradle Daemon (subsequent builds will be faster)
+```Starting a Gradle Daemon (subsequent builds will be faster)
 Calculating task graph as no cached configuration is available for tasks: spotlessCheck detekt test
 > Task :buildSrc:checkKotlinGradlePluginConfigurationErrors SKIPPED
 > Task :buildSrc:pluginDescriptors
@@ -67,127 +55,161 @@ Calculating task graph as no cached configuration is available for tasks: spotle
 > Task :app:generateDebugResources
 > Task :app:injectCrashlyticsMappingFileIdDebug
 > Task :app:injectCrashlyticsVersionControlInfoDebug
-> Task :app:processDebugGoogleServices FAILED
+> Task :app:processDebugGoogleServices
 > Task :core:preBuild UP-TO-DATE
 > Task :core:preDebugBuild UP-TO-DATE
 > Task :core:generateDebugResValues
 > Task :core:generateDebugResources
 > Task :core:packageDebugResources
-> Task :core:processDebugNavigationResources
 
 > Task :app:detekt
 Property 'style>ForbiddenComment>values' is deprecated. Use \`comments\` instead, make sure you escape your text for Regular Expressions..
 Property 'naming>FunctionNaming>ignoreOverridden' is deprecated. This configuration is ignored and will be removed in the future.
 
 > Task :core:detekt
-> Task :app:generateDebugBuildConfig
+> Task :core:processDebugNavigationResources
+> Task :app:packageDebugResources
 > Task :core:parseDebugLocalResources
 > Task :core:generateDebugRFile
-> Task :app:createDebugCompatibleScreenManifests
-> Task :core:extractDeepLinksDebug
+> Task :app:generateDebugBuildConfig
 > Task :core:writeDebugAarMetadata
-> Task :core:processDebugManifest
-> Task :core:compileDebugLibraryResources
-> Task :core:checkKotlinGradlePluginConfigurationErrors SKIPPED
-> Task :core:generateDebugBuildConfig
 > Task :app:processDebugNavigationResources
-> Task :app:compileDebugNavigationResources
-> Task :core:javaPreCompileDebug
+> Task :app:dataBindingMergeDependencyArtifactsDebug
 > Task :app:checkDebugAarMetadata
+> Task :app:mapDebugSourceSetPaths
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:parseDebugLocalResources
+> Task :app:extractDeepLinksDebug
+> Task :core:extractDeepLinksDebug
+> Task :app:compileDebugNavigationResources
+> Task :core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:compileDebugLibraryResources
+> Task :core:generateDebugBuildConfig
+> Task :core:javaPreCompileDebug
+> Task :core:processDebugManifest
+> Task :app:javaPreCompileDebug
 > Task :app:preDebugUnitTestBuild UP-TO-DATE
 > Task :app:javaPreCompileDebugUnitTest
 > Task :app:preReleaseBuild UP-TO-DATE
 > Task :app:buildKotlinToolingMetadata
 > Task :app:dataBindingMergeDependencyArtifactsRelease
-> Task :app:dataBindingMergeDependencyArtifactsDebug
 > Task :app:generateReleaseResValues
-> Task :app:injectCrashlyticsMappingFileIdRelease
 > Task :app:generateReleaseResources
-> Task :app:processReleaseGoogleServices FAILED
+> Task :app:injectCrashlyticsMappingFileIdRelease
+> Task :app:processDebugMainManifest
+> Task :app:extractReleaseVersionControlInfo
+> Task :app:injectCrashlyticsVersionControlInfoRelease
+> Task :app:processReleaseGoogleServices
 > Task :core:preReleaseBuild UP-TO-DATE
 > Task :core:generateReleaseResValues
 > Task :core:generateReleaseResources
 > Task :core:packageReleaseResources
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :app:packageReleaseResources
 > Task :core:processReleaseNavigationResources
 > Task :app:processReleaseNavigationResources
+> Task :app:parseReleaseLocalResources
 > Task :core:parseReleaseLocalResources
 > Task :core:generateReleaseRFile
 > Task :app:generateReleaseBuildConfig
 > Task :core:writeReleaseAarMetadata
 > Task :app:checkReleaseAarMetadata
 > Task :app:compileReleaseNavigationResources
-> Task :app:extractReleaseVersionControlInfo
+> Task :app:mapReleaseSourceSetPaths
 > Task :app:createReleaseCompatibleScreenManifests
-> Task :app:injectCrashlyticsVersionControlInfoRelease
+> Task :app:extractDeepLinksRelease
 > Task :core:extractDeepLinksRelease
+> Task :core:processReleaseManifest
+> Task :app:processReleaseMainManifest
+> Task :app:processReleaseManifest
+> Task :app:processReleaseManifestForPackage
 > Task :core:compileReleaseLibraryResources
 > Task :core:generateReleaseBuildConfig
-> Task :core:processReleaseManifest
+> Task :app:mergeReleaseResources
+> Task :app:mergeDebugResources
+> Task :app:dataBindingGenBaseClassesRelease
+> Task :app:dataBindingGenBaseClassesDebug
+> Task :app:processReleaseResources
+> Task :app:processDebugResources
 > Task :core:javaPreCompileRelease
-> Task :app:javaPreCompileRelease
 > Task :app:preReleaseUnitTestBuild UP-TO-DATE
+> Task :app:javaPreCompileRelease
 > Task :app:javaPreCompileReleaseUnitTest
-> Task :core:preDebugUnitTestBuild UP-TO-DATE
-> Task :app:javaPreCompileDebug
-> Task :core:javaPreCompileDebugUnitTest
 > Task :core:preReleaseUnitTestBuild UP-TO-DATE
-> Task :core:generateReleaseUnitTestStubRFile
+> Task :core:preDebugUnitTestBuild UP-TO-DATE
 > Task :core:generateDebugUnitTestStubRFile
+> Task :core:generateReleaseUnitTestStubRFile
 > Task :core:javaPreCompileReleaseUnitTest
+> Task :core:javaPreCompileDebugUnitTest
 > Task :core:compileReleaseKotlin
 > Task :core:processReleaseJavaRes
 > Task :core:compileDebugKotlin
 > Task :core:processDebugJavaRes
-> Task :core:compileReleaseJavaWithJavac
 > Task :core:compileDebugJavaWithJavac
-> Task :core:bundleLibRuntimeToJarRelease
-> Task :core:bundleLibCompileToJarDebug
+> Task :core:compileReleaseJavaWithJavac
 > Task :core:bundleLibRuntimeToJarDebug
+> Task :core:bundleLibCompileToJarDebug
+> Task :core:bundleLibRuntimeToJarRelease
 > Task :core:bundleLibCompileToJarRelease
-> Task :core:createFullJarRelease
-> Task :core:compileReleaseUnitTestKotlin NO-SOURCE
 > Task :core:createFullJarDebug
+> Task :core:createFullJarRelease
 > Task :core:compileDebugUnitTestKotlin NO-SOURCE
-> Task :core:compileReleaseUnitTestJavaWithJavac NO-SOURCE
 > Task :core:compileDebugUnitTestJavaWithJavac NO-SOURCE
 > Task :core:processDebugUnitTestJavaRes NO-SOURCE
+> Task :core:testDebugUnitTest NO-SOURCE
+> Task :core:compileReleaseUnitTestKotlin NO-SOURCE
+> Task :core:compileReleaseUnitTestJavaWithJavac NO-SOURCE
 > Task :core:processReleaseUnitTestJavaRes NO-SOURCE
 > Task :core:testReleaseUnitTest NO-SOURCE
-> Task :core:testDebugUnitTest NO-SOURCE
 > Task :core:test UP-TO-DATE
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/lint_step-1768419406674.json
+> Task :app:kspDebugKotlin
+> Task :app:kspReleaseKotlin
+
+> Task :app:compileDebugKotlin
+w: file:///home/runner/work/Fridge/Fridge/app/src/main/kotlin/ro/fridge/di/DatabaseModule.kt:25:11 'fun fallbackToDestructiveMigration(): RoomDatabase.Builder<AppDatabase>' is deprecated. Replace by overloaded version with parameter to indicate if all tables should be dropped or not.
+w: file:///home/runner/work/Fridge/Fridge/app/src/main/kotlin/ro/fridge/ui/item/ItemDetailScreen.kt:26:44 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/Fridge/Fridge/app/src/main/kotlin/ro/fridge/ui/theme/Theme.kt:61:20 'var statusBarColor: Int' is deprecated. Deprecated in Java.
+
+> Task :app:compileReleaseKotlin
+w: file:///home/runner/work/Fridge/Fridge/app/src/main/kotlin/ro/fridge/di/DatabaseModule.kt:25:11 'fun fallbackToDestructiveMigration(): RoomDatabase.Builder<AppDatabase>' is deprecated. Replace by overloaded version with parameter to indicate if all tables should be dropped or not.
+w: file:///home/runner/work/Fridge/Fridge/app/src/main/kotlin/ro/fridge/ui/item/ItemDetailScreen.kt:26:44 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/Fridge/Fridge/app/src/main/kotlin/ro/fridge/ui/theme/Theme.kt:61:20 'var statusBarColor: Int' is deprecated. Deprecated in Java.
+
+> Task :app:compileDebugJavaWithJavac
+> Task :app:compileReleaseJavaWithJavac
+> Task :app:hiltAggregateDepsDebug
+> Task :app:hiltAggregateDepsRelease
+> Task :app:hiltJavaCompileRelease
+> Task :app:processReleaseJavaRes
+> Task :app:hiltJavaCompileDebug
+> Task :app:processDebugJavaRes
+> Task :app:bundleReleaseClassesToCompileJar
+> Task :app:bundleDebugClassesToCompileJar
+> Task :app:kspReleaseUnitTestKotlin NO-SOURCE
+> Task :app:kspDebugUnitTestKotlin NO-SOURCE
+> Task :app:compileReleaseUnitTestKotlin NO-SOURCE
+> Task :app:compileReleaseUnitTestJavaWithJavac NO-SOURCE
+> Task :app:compileDebugUnitTestKotlin NO-SOURCE
+> Task :app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :app:hiltAggregateDepsReleaseUnitTest
+> Task :app:hiltJavaCompileReleaseUnitTest NO-SOURCE
+> Task :app:processReleaseUnitTestJavaRes NO-SOURCE
+> Task :app:hiltAggregateDepsDebugUnitTest
+> Task :app:hiltJavaCompileDebugUnitTest NO-SOURCE
+> Task :app:processDebugUnitTestJavaRes NO-SOURCE
+> Task :app:transformDebugClassesWithAsm
+> Task :app:transformReleaseClassesWithAsm
+> Task :app:bundleDebugClassesToRuntimeJar
+> Task :app:bundleReleaseClassesToRuntimeJar
+> Task :app:transformDebugUnitTestClassesWithAsm
+> Task :app:testDebugUnitTest NO-SOURCE
+> Task :app:transformReleaseUnitTestClassesWithAsm
+> Task :app:testReleaseUnitTest NO-SOURCE
+> Task :app:test UP-TO-DATE
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/lint_step-1768421211721.json
 
 [Incubating] Problems report is available at: file:///home/runner/work/Fridge/Fridge/build/reports/problems/problems-report.html
-
-FAILURE: Build completed with 2 failures.
-
-1: Task failed with an exception.
------------
-* What went wrong:
-Execution failed for task ':app:processDebugGoogleServices'.
-> com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 2 column 2 path $
-  See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
-
-* Try:
-> Run with --stacktrace option to get the stack trace.
-> Run with --info or --debug option to get more log output.
-> Run with --scan to generate a Build Scan (powered by Develocity).
-> Get more help at https://help.gradle.org.
-==============================================================================
-
-2: Task failed with an exception.
------------
-* What went wrong:
-Execution failed for task ':app:processReleaseGoogleServices'.
-> com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 2 column 2 path $
-  See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
-
-* Try:
-> Run with --stacktrace option to get the stack trace.
-> Run with --info or --debug option to get more log output.
-> Run with --scan to generate a Build Scan (powered by Develocity).
-> Get more help at https://help.gradle.org.
-==============================================================================
 
 Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
 
@@ -195,8 +217,8 @@ You can use '--warning-mode all' to show the individual deprecation warnings and
 
 For more on this, please refer to https://docs.gradle.org/9.2.0/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
 
-BUILD FAILED in 7m 17s
-78 actionable tasks: 78 executed
+BUILD SUCCESSFUL in 3m 48s
+120 actionable tasks: 120 executed
 Configuration cache entry stored.
 ```
 </details>
